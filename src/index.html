@@ -1,24 +1,40 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Cramfrenzy</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="./assets/img/CramFrenzyFavicon.png">
   <link rel="stylesheet" href="assets/fontawesome-free-5.7.2-web/css/all.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  
+
   <link href="assets/style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
   <div id="main">
-      <app-root></app-root>
+    <app-root></app-root>
   </div>
-  
+  <a onclick="topFunction()" class="back2top" title="Back to Top"><i class="fa fa-angle-up"></i>Top</a>
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+
+  <script defer>
+    function topFunction() {
+      $('html, body').delay(0).animate({ scrollTop: 0 }, 400);
+    }
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop() > 300) {
+        $('.back2top').show();
+      } else {
+        $('.back2top').hide();
+      }
+    })
+  </script>
 </body>
+
 </html>
